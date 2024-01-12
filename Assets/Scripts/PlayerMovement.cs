@@ -22,11 +22,6 @@ public class PlayerMovement : MonoBehaviour
         Move();
     }
 
-    void FixedUpdate()
-    {
-       // Move();
-
-    }
 
    
     // 이동 방향 구하기
@@ -46,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
             Vector3 moveDir = lookForward * moveInput.y + lookRight * moveInput.x;
 
 
-            characterBody.transform.forward = moveDir * Time.deltaTime;
+            characterBody.transform.forward = moveDir.normalized;
 
             if (isRun)
             {
