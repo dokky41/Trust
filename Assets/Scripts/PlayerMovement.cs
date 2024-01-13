@@ -22,8 +22,13 @@ public class PlayerMovement : MonoBehaviour
         Move();
     }
 
+    private void FixedUpdate()
+    {
+        // Move();
+        
+    }
 
-   
+
     // 이동 방향 구하기
     private void Move()
     {
@@ -46,10 +51,12 @@ public class PlayerMovement : MonoBehaviour
             if (isRun)
             {
                 transform.position += Vector3.ClampMagnitude(moveDir, 1f) * Time.deltaTime * 8f;
+                
             }
             else
             {
                 transform.position += Vector3.ClampMagnitude(moveDir, 1f) * Time.deltaTime * 5f;
+                
             }
 
         }
