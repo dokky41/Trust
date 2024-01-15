@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
-                transform.position += Vector3.ClampMagnitude(moveDir, 1f) * Time.deltaTime * 5f;
+                transform.position += Vector3.ClampMagnitude(moveDir, 1f) * Time.deltaTime * 4f;
                 
             }
 
