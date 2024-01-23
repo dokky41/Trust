@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,22 +13,21 @@ public class PlayerMovement : MonoBehaviour
     private Transform cameraArm;
     Animator animator;
 
+    PhotonView pv;
 
     void Start()
     {
         animator = characterBody.GetComponent<Animator>();
+        cameraArm = GameObject.Find("CameraArm").transform;
     }
 
     private void Update()
-    {
-        Move();
-    }
+    { 
 
-    private void FixedUpdate()
-    {
-        // Move();
+            Move();
         
     }
+
 
 
     // 이동 방향 구하기

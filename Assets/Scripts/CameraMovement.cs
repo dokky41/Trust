@@ -30,6 +30,8 @@ public class CameraMovement : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        objectToFollow = GameObject.Find("FollowCam").transform;
     }
 
     private void Update()
