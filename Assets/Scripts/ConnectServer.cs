@@ -11,9 +11,10 @@ public class ConnectServer : MonoBehaviourPunCallbacks
 
     private void Awake()
     {
-        server.options[0].text = "Union";
-        server.options[1].text = "Aether";
-        server.options[2].text = "Haselo";
+        server.options[0].text = "Spring";
+        server.options[1].text = "Summer";
+        server.options[2].text = "Fall";
+        server.options[3].text = "Winter";
     }
 
     public void SelectServer()

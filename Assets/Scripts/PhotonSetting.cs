@@ -15,16 +15,6 @@ public class PhotonSetting : MonoBehaviour
     [SerializeField]
     InputField password;
 
-    private void Start()
-    {
-
-    }
-
-    public void Function()
-    {
-        Debug.Log("Function");
-    }
-
     public void LoginSuccess(LoginResult result)
     {
         // 자동으로 동기화를 시켜주지 않겠다. (카트라이더의 경우는 true가 좋을듯?)
@@ -50,7 +40,7 @@ public class PhotonSetting : MonoBehaviour
         (
             request,
             LoginSuccess,
-            (PlayFabError error)=> NotificationManager.NotificationWindow(error.ToString())
+            (PlayFabError error)=> NotificationManager.NotificationWindow("Check your ID or PassWord")
         );
 
     }
@@ -71,7 +61,9 @@ public class PhotonSetting : MonoBehaviour
         (
             request,
             (RegisterPlayFabUserResult result) => NotificationManager.NotificationWindow(result.ToString()),
-            (PlayFabError error) => NotificationManager.NotificationWindow(error.ToString())
+            (PlayFabError error) => NotificationManager.NotificationWindow("Please register a password between 6 " +
+            "and 12 characters, " +
+            "and a username between 3 and 20 characters. Your provided information is not valid.")
         );
 
 
