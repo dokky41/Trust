@@ -53,10 +53,13 @@ public class PhotonPlayer : MonoBehaviourPun, IPunObservable
     {
         direction.x = Input.GetAxisRaw("Horizontal");
         direction.z = Input.GetAxisRaw("Vertical");
-
         direction.Normalize();
 
+        Quaternion targetRotation = Quaternion.LookRotation(direction, Vector3.up);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotateSpeed * Time.deltaTime);
+
         transform.position += transform.TransformDirection(direction) * speed * time;
+        
     }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)

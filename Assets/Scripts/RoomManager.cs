@@ -31,6 +31,8 @@ public class RoomManager : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         PhotonNetwork.LoadLevel("MainScene");
+        DestroyObject(GameObject.Find("Global Audio"));
+        DestroyObject(GameObject.Find("CursorManager"));
     }
 
     public void CreateRoomObject()

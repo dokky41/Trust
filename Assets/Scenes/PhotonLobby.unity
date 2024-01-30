@@ -488,11 +488,13 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Option A
+    - m_Text: Spring
       m_Image: {fileID: 0}
-    - m_Text: Option B
+    - m_Text: Summer
       m_Image: {fileID: 0}
-    - m_Text: Option C
+    - m_Text: Fall
+      m_Image: {fileID: 0}
+    - m_Text: Winter
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -936,7 +938,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -300, y: -150}
+  m_AnchoredPosition: {x: -400, y: -120}
   m_SizeDelta: {x: 600, y: 100}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &848146691
@@ -959,7 +961,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC11C\uBC84\uB97C \uC120\uD0DD\uD574\uC8FC\uC138\uC694"
+  m_text: "* \uC11C\uBC84\uB97C \uC120\uD0DD\uD574\uC8FC\uC138\uC694"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5842087983507f5469e88c1875e82849, type: 2}
   m_sharedMaterial: {fileID: 4026742359176512599, guid: 5842087983507f5469e88c1875e82849,
@@ -1374,7 +1376,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Option A
+  m_text: Spring
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
